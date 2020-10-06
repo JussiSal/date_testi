@@ -6,4 +6,5 @@ python:
 install:
   - pip install coverage
 # command to run tests
-script: python3 test_postinumerot.py || python test_postinumerot.py
+script: coverage run -m test_postinumerot.py
+after_success: coverage report -m
